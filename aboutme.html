@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash's Portfolio - About Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Animation for sliding content */
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slideInLeft {
+      animation: slideInLeft 1s ease-out forwards;
+    }
+
+    .animate-slideInRight {
+      animation: slideInRight 1s ease-out forwards;
+    }
+    .footer-bg {
+      background-color: #1a202c; /* Dark background for the footer */
+    }
+
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  
+  <!-- Navbar -->
+  <nav class="bg-teal-500 p-4 fixed w-full z-10 top-0 left-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-white text-2xl font-bold">
+        <a href="./index.html">Akash</a>
+      </div>
+
+      <!-- Desktop Navbar Links -->
+      <div class="hidden md:flex space-x-8">
+        <a href="./index.html" class="text-white hover:text-teal-200">Home</a>
+        <a href="./projects.html" class="text-white hover:text-teal-200">Projects</a>
+        <a href="./skills.html" class="text-white hover:text-teal-200">Skills</a>
+        <a href="./contact.html" class="text-white hover:text-teal-200">Contact</a>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="md:hidden flex items-center">
+        <button id="navbar-toggler" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-teal-600 p-4">
+      <a href="./index.html" class="block text-white py-2 hover:bg-teal-500">Home</a>
+      <a href="./projects.html" class="block text-white py-2 hover:bg-teal-500">Projects</a>
+      <a href="./skills.html" class="block text-white py-2 hover:bg-teal-500">Skills</a>
+      <a href="./contact.html" class="block text-white py-2 hover:bg-teal-500">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- About Me Section -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8">About Me</h2>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+
+        <!-- Profile Image -->
+        <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-lg mb-6 lg:mb-0 animate-slideInLeft">
+          <img src="./IMG_3431.jpg" alt="Akash's Profile" class="w-full h-full object-cover" style="height: 400px;width: 500px;">
+        </div>
+
+        <!-- About Text -->
+        <div class="flex flex-col items-center lg:items-start text-center lg:text-left animate-slideInRight">
+          <p class="text-lg sm:text-xl text-gray-600 mb-4 max-w-xl mx-auto">
+            Hello! I'm Akash, a passionate full-stack web developer with a keen interest in building interactive and user-friendly web applications.
+            With a background in Zoology and a love for technology, I enjoy solving complex problems and creating clean, scalable, and efficient code. I specialize in building web apps using the MEARN stack (MongoDB, Express.js, Angular, React, Node.js).
+          </p>
+          <p class="text-lg sm:text-xl text-gray-600 mb-4 max-w-xl mx-auto">
+            When I'm not coding, you can find me exploring new technologies, reading tech blogs, or working on personal projects to enhance my skills.
+            I believe in continuous learning and am always eager to take on new challenges.
+          </p>
+          <a href="./projects.html" class="inline-block px-6 py-3 bg-teal-500 text-white text-lg font-semibold rounded-lg hover:bg-teal-600 transition duration-300 mt-4">
+            View My Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Toggle the mobile menu
+    const navbarToggler = document.getElementById('navbar-toggler');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    navbarToggler.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+
+</body>
+</html>
